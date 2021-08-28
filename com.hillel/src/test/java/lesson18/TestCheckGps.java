@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class TestCheckGps extends BaseTest{
     @Test
-    public void testGetGeoLocation() throws InterruptedException {
+    public void testGetGeoLocation() {
         driver.get("https://the-internet.herokuapp.com/geolocation");
         WebDriverWait wait = new WebDriverWait(driver, 10000);
         driver.findElement(By.className("example")).findElement(By.tagName("button")).click();

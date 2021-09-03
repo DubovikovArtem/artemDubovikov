@@ -1,4 +1,4 @@
-package Lesson19;
+package com.hillel.Lesson19;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

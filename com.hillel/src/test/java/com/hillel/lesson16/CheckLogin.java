@@ -1,4 +1,4 @@
-package lesson16;
+package com.hillel.lesson16;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;

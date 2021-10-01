@@ -1,11 +1,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Suite1" verbose="1" >
+<!--    <test name="Login test" >-->
+<!--        <parameter name="login" value="qwerty123"/>-->
+<!--        <parameter name="password" value="qwerty123password"/>-->
+<!--        <classes>-->
+<!--            <class name="com.hillel.lesson16.CheckLogin" />-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name="Login test" >
-        <parameter name="login" value="qwerty123"/>
-        <parameter name="password" value="qwerty123password"/>
         <classes>
-            <class name="com.hillel.lesson16.CheckLogin" />
+            <class name="com.hillel.lesson18.TestCheckLogin" />
         </classes>
     </test>
 </suite>

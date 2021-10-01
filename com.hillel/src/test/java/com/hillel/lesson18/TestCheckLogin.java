@@ -29,7 +29,7 @@ public class TestCheckLogin extends BaseTest {
         String msg = new MainPage(driver)
                 .goToLoginPage()
                 .setPassword("SuperSecretPassword!")
-                .setUsername("tomsmith1")
+                .setUsername("tomsmith11")
                 .clickLoginButton().getMessage();
 
         Assert.assertTrue(msg.contains("Your username is invalid!"), "Negative case");

@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,16 +30,18 @@ public class LoginPage extends BasePage {
         return message.getText();
     }
 
+    @Step("LoginPage Set user name")
     public LoginPage setUsername(String username) {
         setValue(setUsername, username);
         return this;
     }
-
+    @Step("LoginPage Set password")
     public LoginPage setPassword(String password) {
         setValue(setPassword, password);
         return this;
     }
 
+    @Step("LoginPage Click login button")
     public SecurePage clickLoginButton() {
         loginButton.click();
         return new SecurePage(driver);

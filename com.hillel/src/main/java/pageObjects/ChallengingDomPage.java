@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class ChallengingDomPage extends BasePage{
+public class ChallengingDomPage extends BasePage {
 
     @FindBy(xpath = "//div[@class='large-2 columns']//a[1]")
     private WebElement buttonBlue;
@@ -21,28 +22,32 @@ public class ChallengingDomPage extends BasePage{
     @FindBy(css = " tr > td:nth-child(4)")
     private List<WebElement> tableValue;
 
-    public ChallengingDomPage(WebDriver driver){
+    public ChallengingDomPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
-    public ChallengingDomPage clickBlueButton(){
+    @Step("ChallengingDomPage Click blue button")
+    public ChallengingDomPage clickBlueButton() {
         buttonBlue.click();
         return new ChallengingDomPage(driver);
     }
 
-    public ChallengingDomPage clickRadButton(){
+    @Step("ChallengingDomPage Click rad button")
+    public ChallengingDomPage clickRadButton() {
         buttonRad.click();
         return new ChallengingDomPage(driver);
     }
 
-    public ChallengingDomPage clickGreenButton(){
+    @Step("ChallengingDomPage Click green button")
+    public ChallengingDomPage clickGreenButton() {
         buttonGreen.click();
         return new ChallengingDomPage(driver);
     }
 
-    public void showTableValue(){
-        for(WebElement element: tableValue){
+    @Step("ChallengingDomPage show table value")
+    public void showTableValue() {
+        for (WebElement element : tableValue) {
             System.out.println(element.getText());
         }
     }

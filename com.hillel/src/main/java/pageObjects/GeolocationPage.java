@@ -1,12 +1,13 @@
 package pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class GeolocationPage extends BasePage{
+public class GeolocationPage extends BasePage {
     @FindBy(tagName = "button")
     private WebElement geolocationButton;
 
@@ -22,16 +23,19 @@ public class GeolocationPage extends BasePage{
         PageFactory.initElements(driver, this);
     }
 
-    public GeolocationPage clickGeolocationButton(){
+    @Step("GeolocationPage click geolocation button")
+    public GeolocationPage clickGeolocationButton() {
         geolocationButton.click();
         return new GeolocationPage(driver);
     }
 
-    public String getLatitude(){
+    @Step("GeolocationPage get lat")
+    public String getLatitude() {
         return wait.until(ExpectedConditions.visibilityOf(getLat)).getText();
     }
 
-    public String getLongitude(){
+    @Step("GeolocationPage get lon")
+    public String getLongitude() {
         return wait.until(ExpectedConditions.visibilityOf(getLng)).getText();
     }
 

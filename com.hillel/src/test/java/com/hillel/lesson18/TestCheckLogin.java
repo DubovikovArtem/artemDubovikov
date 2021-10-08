@@ -1,5 +1,6 @@
 package com.hillel.lesson18;
 
+import com.hillel.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.MainPage;
@@ -29,7 +30,7 @@ public class TestCheckLogin extends BaseTest {
         String msg = new MainPage(driver)
                 .goToLoginPage()
                 .setPassword("SuperSecretPassword!")
-                .setUsername("tomsmith1")
+                .setUsername("tomsmith11")
                 .clickLoginButton().getMessage();
 
         Assert.assertTrue(msg.contains("Your username is invalid!"), "Negative case");

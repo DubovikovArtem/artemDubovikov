@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,7 @@ public class HoverPage extends BasePage {
         super(driver);
         PageFactory.initElements(driver, this);
     }
-
+    @Step("HoverPage show user name")
     public void showUserName() {
         for (WebElement element : driver.findElements(figure)) {
             actions.moveToElement(element).perform();

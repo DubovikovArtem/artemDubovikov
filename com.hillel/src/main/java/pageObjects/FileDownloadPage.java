@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +18,7 @@ public class FileDownloadPage extends BasePage {
         super(driver);
         PageFactory.initElements(driver,this);
     }
-
+    @Step("FileDownloadPage download")
     public void downloadFile(String fileName) {
         for (WebElement element: fileNameLink) {
             String elementText = element.getText();

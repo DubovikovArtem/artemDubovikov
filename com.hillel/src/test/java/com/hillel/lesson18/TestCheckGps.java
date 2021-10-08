@@ -1,6 +1,7 @@
 package com.hillel.lesson18;
 
 
+import com.hillel.BaseTest;
 import org.testng.annotations.Test;
 
 import pageObjects.GeolocationPage;

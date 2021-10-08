@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,16 +23,17 @@ public class FileUploadPage extends BasePage {
         super(driver);
         PageFactory.initElements(driver,this);
     }
-
+    @Step("FileUploadPage upload")
     public void uploadFile(String path){
         uploadFileLink.sendKeys(path);
         button.click();
     }
-
+    @Step("FileUploadPage get result")
     public String getResult(){
         return resultSuccess.getText();
     }
 
+    @Step("FileUploadPage get file name")
     public String getFileName(){
         return resultFileName.getText();
     }
